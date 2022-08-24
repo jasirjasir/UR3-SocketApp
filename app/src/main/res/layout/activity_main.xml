@@ -1,0 +1,75 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:layout_margin = "16dp"
+    tools:context = ".MainActivity">
+
+    <EditText
+        android:id="@+id/etIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:inputType="text"
+        android:text="192.168.1.9" />
+    <EditText
+        android:id = "@+id/etPort"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@+id/etIP"
+        android:enabled="false"
+        android:text="30002"
+        android:inputType = "number" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPort"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="CONNECT" />
+    <TextView
+        android:id = "@+id/tvMessages"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_above = "@+id/htMessage"
+        android:layout_below = "@+id/btnConnect"
+        android:inputType = "textMultiLine"
+        android:visibility="gone"
+        android:textAppearance = "@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <EditText
+        android:id="@+id/vtMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSend"
+        android:layout_marginBottom="379dp"
+        android:visibility="invisible"
+        android:hint="Enter linear"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/htMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSend"
+        android:layout_marginBottom="259dp"
+        android:visibility="invisible"
+        android:hint="Enter angular"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="441dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:enabled="false"
+        android:text="GO" />
+</RelativeLayout>
